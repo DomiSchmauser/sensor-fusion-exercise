@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "sensor-fusion-exercise"
+version = "0.0.0"
+description = "Sensor Fusion Exercise"
+authors = [
+    "Dominik Schmauser <dominik.schmauser@helsing.ai>",
+]
+include = [
+    "LICENSE",
+]
+packages = [
+    { include = "sensor_fusion_exercise", from = "src" },
+]
+
+[[tool.poetry.source]]
+name = "pypi-public"
+url = "https://pypi.org/simple/"
+[tool.poetry.dependencies]
+python = "^3.10"
+nptyping = "^2.5.0"
+numpy = "^1.26.4"
+jupyter = "1.1.1"
+jinja2 = "3.1.5"
+matplotlib = "3.10.0"
+scipy = "1.12.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-xdist = "*"
+
+[build-system]
+requires = [
+    "poetry-core>=1.0.0",
+]
+build-backend = "poetry.core.masonry.api"
